@@ -7,5 +7,5 @@ start:
 publish:
     npm publish
 
-make lint:
+lint:
 	npm run eslint
