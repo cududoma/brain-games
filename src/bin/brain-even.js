@@ -21,7 +21,7 @@ const gameLogic = (count, namePlayer) => {
   if (answer === checkEven(randomInt)) {
     if (count < 3) {
       console.log('Correct!');
-      gameLogic(count + 1);
+      gameLogic(count + 1, namePlayer);
     } else {
       console.log(`Correct! \nCongratulations, ${namePlayer}!`);
     }
