@@ -7,6 +7,15 @@ const greetThePlayer = () => {
   return namePlayer;
 };
 
+const checkAnswer = (answer, question, namePlayer) => {
+  if (Number(answer) === question) {
+    console.log('Correct!');
+    return 1;
+  }
+  console.log(`${answer} is wrong answer ;(. Correct answer was ${question}. \nLet's try again, ${namePlayer}!`);
+  return 2;
+};
+
 const getRandomInt = (min, max) => Math.floor(Math.random() * ((max - min) + 1)) + min;
 
 const checkEven = (num) => {
@@ -43,4 +52,4 @@ const gameEven = () => {
   gameLogic(count, namePlayer);
 };
 
-export { gameEven, greetThePlayer, getRandomInt };
+export { gameEven, greetThePlayer, getRandomInt, checkAnswer };
