@@ -43,4 +43,4 @@ const gameEven = () => {
   gameLogic(count, namePlayer);
 };
 
-export { gameEven, greetThePlayer };
+export { gameEven, greetThePlayer, getRandomInt };
