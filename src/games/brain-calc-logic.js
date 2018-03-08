@@ -11,6 +11,7 @@ const checkAnswer = (answer, question, namePlayer) => {
 };
 
 const calcLogic = () => {
+  console.log('What is the result of the expression?\n');
   const namePlayer = greetThePlayer();
   let firstTermExp = getRandomInt(1, 99);
   let secondTermExp = getRandomInt(1, 99);
