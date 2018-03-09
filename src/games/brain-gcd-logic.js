@@ -16,8 +16,9 @@ const gcd = (firstTermExp, secondTermExp) => {
 const gcdLogic = () => {
   const firstTermExp = getRandomInt(1, 99);
   const secondTermExp = getRandomInt(1, 99);
-  console.log(`Question: ${firstTermExp} ${secondTermExp}`);
-  return gcd(firstTermExp, secondTermExp);
+  const question = `${firstTermExp} ${secondTermExp}`;
+  const answer = gcd(firstTermExp, secondTermExp);
+  return [question, answer];
 };
 
 const gcdGame = () => {

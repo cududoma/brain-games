@@ -1,28 +1,20 @@
 import { commonGameLogic, getRandomInt } from '../index';
 
-const calcLogic = (step) => {
-  switch (step) {
-    case 1: {
-      const firstTerm = getRandomInt(1, 99);
-      const secondTerm = getRandomInt(1, 99);
-      console.log(`Question: ${firstTerm} + ${secondTerm}`);
-      return firstTerm + secondTerm;
-    }
-    case 2: {
-      const firstTerm = getRandomInt(1, 99);
-      const secondTerm = getRandomInt(1, 99);
-      console.log(`Question: ${firstTerm} - ${secondTerm}`);
-      return firstTerm - secondTerm;
-    }
-    case 3: {
-      const firstTerm = getRandomInt(1, 99);
-      const secondTerm = getRandomInt(1, 99);
-      console.log(`Question: ${firstTerm} * ${secondTerm}`);
-      return firstTerm * secondTerm;
-    }
-    default:
-      throw Error(`Wrong step number ${step}.`);
-  }
+const ops = {
+  '+': (num1, num2) => num1 + num2,
+  '-': (num1, num2) => num1 - num2,
+  '*': (num1, num2) => num1 * num2,
+};
+
+const calcLogic = () => {
+  const firstNum = getRandomInt(1, 99);
+  const secondNum = getRandomInt(1, 99);
+  const opNames = Object.keys(ops);
+  const op = opNames[getRandomInt(0, opNames.length - 1)];
+  const question = `${firstNum} ${op} ${secondNum}`;
+  const opFunction = ops[op];
+  const answer = opFunction(firstNum, secondNum);
+  return [question, answer];
 };
 
 const calcGame = () => {

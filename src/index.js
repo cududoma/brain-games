@@ -16,7 +16,8 @@ const commonGameLogic = (greetingMessage, gameLogicFunc) => {
 
   const playerName = greetThePlayer();
   for (let i = 1; i <= 3; i += 1) {
-    const correctAnswer = gameLogicFunc(i);
+    const [question, correctAnswer] = gameLogicFunc();
+    console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
     if (answer === String(correctAnswer)) {
       console.log('Correct!');

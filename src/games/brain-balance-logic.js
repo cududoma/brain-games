@@ -35,8 +35,9 @@ const balanceNumber = (num) => {
 
 const balanceLogic = () => {
   const number = getRandomInt(100, 9999);
-  console.log(`Question: ${number}`);
-  return balanceNumber(number);
+  const question = `${number}`;
+  const answer = balanceNumber(number);
+  return [question, answer];
 };
 
 const balanceGame = () => {
