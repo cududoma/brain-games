@@ -1,5 +1,4 @@
-import readlineSync from 'readline-sync';
-import { getRandomInt, greetThePlayer, checkAnswer } from '../index';
+import { getRandomInt, commonGameLogic } from '../index';
 
 const gcd = (firstTermExp, secondTermExp) => {
   let a = firstTermExp;
@@ -15,17 +14,14 @@ const gcd = (firstTermExp, secondTermExp) => {
 };
 
 const gcdLogic = () => {
-  console.log('Find the greatest common divisor of given numbers.\n');
-  const namePlayer = greetThePlayer();
-  for (let i = 1; i <= 3; i += 1) {
-    const firstTermExp = getRandomInt(1, 99);
-    const secondTermExp = getRandomInt(1, 99);
-    console.log(`Question: ${firstTermExp} ${secondTermExp}`);
-    const answer = readlineSync.question('Your answer: ');
-    const question = gcd(firstTermExp, secondTermExp);
-    if (checkAnswer(answer, question, namePlayer) === 2) return;
-  }
-  console.log(`Congratulations, ${namePlayer}!`);
+  const firstTermExp = getRandomInt(1, 99);
+  const secondTermExp = getRandomInt(1, 99);
+  console.log(`Question: ${firstTermExp} ${secondTermExp}`);
+  return gcd(firstTermExp, secondTermExp);
 };
 
-export default gcdLogic;
+const gcdGame = () => {
+  commonGameLogic('Find the greatest common divisor of given numbers', gcdLogic);
+};
+
+export default gcdGame;
