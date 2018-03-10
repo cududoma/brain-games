@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import calcGame from '../games/brain-calc-logic';
+import calcGame from '../games/game-calc';
 
 calcGame();
