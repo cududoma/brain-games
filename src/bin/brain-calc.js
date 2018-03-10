@@ -3,4 +3,3 @@
 import calcGame from '../games/brain-calc-logic';
 
 calcGame();
-
