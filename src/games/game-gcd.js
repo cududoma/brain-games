@@ -13,7 +13,7 @@ const gcd = (firstTermExp, secondTermExp) => {
   return a + b;
 };
 
-const gcdLogic = () => {
+const gcdGameCondition = () => {
   const firstTermExp = getRandomInt(1, 99);
   const secondTermExp = getRandomInt(1, 99);
   const question = `${firstTermExp} ${secondTermExp}`;
@@ -22,7 +22,7 @@ const gcdLogic = () => {
 };
 
 const gcdGame = () => {
-  commonGameLogic('Find the greatest common divisor of given numbers', gcdLogic);
+  commonGameLogic('Find the greatest common divisor of given numbers', gcdGameCondition);
 };
 
 export default gcdGame;

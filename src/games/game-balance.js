@@ -33,7 +33,7 @@ const balanceNumber = (num) => {
   return digits.sort().map(d => String(d)).join('');
 };
 
-const balanceLogic = () => {
+const balanceGameCondition = () => {
   const number = getRandomInt(100, 9999);
   const question = `${number}`;
   const answer = balanceNumber(number);
@@ -41,7 +41,7 @@ const balanceLogic = () => {
 };
 
 const balanceGame = () => {
-  commonGameLogic('Balance the given number.', balanceLogic);
+  commonGameLogic('Balance the given number.', balanceGameCondition);
 };
 
 export default balanceGame;

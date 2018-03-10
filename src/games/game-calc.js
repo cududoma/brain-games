@@ -6,7 +6,7 @@ const ops = {
   '*': (num1, num2) => num1 * num2,
 };
 
-const calcLogic = () => {
+const calcGameCondition = () => {
   const firstNum = getRandomInt(1, 99);
   const secondNum = getRandomInt(1, 99);
   const opNames = Object.keys(ops);
@@ -18,7 +18,7 @@ const calcLogic = () => {
 };
 
 const calcGame = () => {
-  commonGameLogic('What is the result of the expression?', calcLogic);
+  commonGameLogic('What is the result of the expression?', calcGameCondition);
 };
 
 export default calcGame;

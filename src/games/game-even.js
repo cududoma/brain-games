@@ -2,7 +2,7 @@ import { getRandomInt, commonGameLogic } from '../index';
 
 const checkEven = num => (num % 2 === 0 ? 'yes' : 'no');
 
-const evenLogic = () => {
+const evenGameCondition = () => {
   const randomInt = getRandomInt(1, 99);
   const question = `${randomInt}`;
   const answer = checkEven(randomInt);
@@ -10,7 +10,7 @@ const evenLogic = () => {
 };
 
 const evenGame = () => {
-  commonGameLogic('Answer "yes" if number even otherwise answer "no".', evenLogic);
+  commonGameLogic('Answer "yes" if number even otherwise answer "no".', evenGameCondition);
 };
 
 export default evenGame;

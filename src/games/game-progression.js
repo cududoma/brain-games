@@ -1,7 +1,7 @@
 import { commonGameLogic, getRandomInt } from '../index';
 
 
-const progressionLogic = () => {
+const progressionGameCondition = () => {
   const step = getRandomInt(2, 5);
   const startNum = getRandomInt(2, 9);
   const sequenceLenght = 10;
@@ -18,7 +18,7 @@ const progressionLogic = () => {
 };
 
 const progressionGame = () => {
-  commonGameLogic('What number is missing in this progression?', progressionLogic);
+  commonGameLogic('What number is missing in this progression?', progressionGameCondition);
 };
 
 export default progressionGame;
