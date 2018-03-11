@@ -3,10 +3,10 @@ import { getRandomInt, commonGameLogic } from '../index';
 const isPrime = (num) => {
   for (let i = 2; i <= Math.sqrt(num); i += 1) {
     if ((num % i) === 0) {
-      return true;
+      return false;
     }
   }
-  return false;
+  return true;
 };
 
 const primeGameCondition = () => {
